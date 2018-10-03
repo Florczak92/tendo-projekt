@@ -1,0 +1,94 @@
+<html>
+<head>
+
+<title>Tendo</title>
+
+   <style>
+            #button1 {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                transform: scale(0.5);
+                border-radius: 50px;
+				transition: all 350ms ease-in;	
+				transition-duration: 0.5s;
+				transition-delay: 0s;
+				zoom: 100%;
+            }
+            #button1:hover {
+            	border-radius: 50px;
+				transform: scale(0.65);
+                zoom: 200px;
+                margin: 0px auto;
+            }
+
+            #button2 {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                transform: scale(0.5);
+                border-radius: 50px;
+				transition: all 350ms ease-in;	
+				transition-duration: 0.5s;
+				transition-delay: 0s;
+				zoom: 100%;
+            }
+            #button2:hover {
+            	border-radius: 50px;
+				transform: scale(0.65);
+                zoom: 200px;
+                margin: 0px auto;
+            }
+            .popup {
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                border-radius: 5px;
+                visibility: hidden;
+            }
+
+            #robotglove {
+				width: 860px;
+				height: 390px;
+				background-image:url(handske.png);
+			}
+        </style>
+        <script>
+            function popup(n){
+                divs = ["popup1","batteries","handle"];
+                if(document.getElementById(divs[n]).style.visibility == "visible"){
+                    document.getElementById(divs[n]).style.visibility = "hidden";
+                }
+                else{
+                    document.getElementById(divs[n]).style.visibility = "visible";
+                }
+            }
+        </script>
+
+</head>
+
+<body>
+<div id="robotglove">
+	   <div id="button1" onclick="popup(0)">
+            <div class="popup" id="popup1">
+                <p> is this what u need?
+                </p>
+            </div>
+        </div>
+
+        <div class="button2" onclick="popup(1)">
+            <div class="popup" id="batteries">
+                <p> is this what u need?
+                </p>
+            </div>
+        </div>
+
+        <div class="button" onclick="popup(2)">
+            <div class="popup" id="handle">
+                <p> is this what u need?
+                </p>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,1 +1,1 @@
-# tendo-projekt
+# Tendo
